@@ -1,5 +1,5 @@
 
-# Project Name: AI-Powered Data Processing and Model Inferencing Pipeline
+# Directory Structure for a generalized data processing and inferencing pipeline
 
 ## Overview
 This project is designed to automate the process of data ingestion, preprocessing, model inference, and post-processing for a variety of use cases. The architecture is modular, allowing for easy integration of new data sources, models, and post-processing steps. The entire workflow is containerized using Docker, making it easy to deploy and scale in different environments.
