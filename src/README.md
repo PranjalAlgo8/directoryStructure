@@ -66,8 +66,8 @@ src/
 To use any of the sub-modules, you can import them directly into your scripts. For example:
 
 ```python
-from src.data_processing import data_cleaning
-from src.utils.helpers import log_message
+from src.postProcessing import process
+from src.inferencing import getPredictions
 ```
 
 The `run` function in `src/__init__.py` serves as the main orchestrator for the application's workflow. It is called from the `app.py` file to execute the entire data processing and model inferencing pipeline.
