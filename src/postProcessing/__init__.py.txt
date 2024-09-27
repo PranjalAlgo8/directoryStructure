@@ -1,0 +1,1 @@
+This file should contain a function known as `process` such that it calls different functionsalities from .py files situated inside the preProcessing module.

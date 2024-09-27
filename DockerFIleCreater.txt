@@ -1,0 +1,39 @@
+Create a Dockerfile for a Python application with the following specifications(keep the creativity to the minimum and just follow the steps as described):
+1. Base Image:
+    Use the python:3.9.12-slim-buster image as the base image. This provides a minimal Debian-based environment with Python 3.9.12 pre-installed.
+
+2. Application Files:
+    all the contents from the current directory (on the host machine) to the /app directory inside the Docker container. This ensures all necessary code and files are available in the container.
+
+3. Set Working Directory:
+    Set the working directory inside the container to /app. All subsequent commands will be executed in this directory.
+
+4.Upgrade Cython Package:
+    Run the command pip install --upgrade cython to upgrade the cython package to the latest version. This is necessary for compiling C extensions.
+
+5. Upgrade pip Package Manager:
+    Run the command pip install --upgrade pip to upgrade the pip package manager to the latest version. This ensures you have the most recent package management tools.
+
+6. Install Project Dependencies:
+    Run the command pip install -r requirements.txt to install all the Python packages listed in the requirements.txt file. This ensures that all dependencies for the application are installed.
+
+7. Update APT Package Lists:
+
+    Run the command apt-get -y update to update the APT package lists to get the latest information on available packages and their dependencies. The -y flag automatically confirms the operation.
+
+8. Install Vim and Nano Editors:
+
+    Run the command apt-get -y install vim nano to install the vim and nano text editors in the container. This provides tools for editing files inside the container. The -y flag automatically confirms the installation.
+
+9. Expose Port:
+
+    Expose port 5001 to make the application accessible on this port. This is necessary if the application inside the container runs on this port.
+
+10. Set Entry Point:
+
+    Set the entry point of the container to python3. This means all subsequent CMD instructions will be passed as arguments to python3.
+
+11. Default Command:
+
+    Set the default command to app.py. This will be executed when the container starts, using the python3 interpreter specified in the ENTRYPOINT instruction. This will run the main application file.
+

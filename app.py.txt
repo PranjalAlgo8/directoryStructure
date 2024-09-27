@@ -1,0 +1,50 @@
+Prompt for Generating app.py Code
+
+The app.py file should be structured as follows (keep the creativity to the minimum and just follow the steps as described):
+
+1. Imports:
+
+Import the Flask class from the flask module to create a web application.
+Import render_template, request, and jsonify from the flask module to handle rendering HTML templates, processing incoming requests, and returning JSON responses, respectively.
+Import BackgroundScheduler from the apscheduler.schedulers.background module to enable background scheduling of jobs.
+Import APScheduler from the flask_apscheduler module to integrate the scheduler with the Flask app.
+Import the logging module, alias it as lg, to configure and use logging throughout the application.
+Import requests for handling HTTP requests.
+Import the run function from the src module to be used as the main execution function for the scheduled job.
+
+2. Flask Application Setup:
+
+Create an instance of the Flask class, assigning it to the variable app.
+This instance will be used to configure routes, handle requests, and start the server.
+
+3. Scheduler Initialization:
+
+Initialize an instance of APScheduler, which is a Flask extension that integrates the APScheduler with the Flask app, and assign it to the variable sched.
+This scheduler will be used to schedule background tasks
+
+4. Main Execution Block:
+
+Use the if __name__ == "__main__": construct to ensure that the code block only runs if the script is executed directly, not when imported as a module.
+
+
+Run Function Invocation:
+
+Call the run() function from the src module to execute the primary logic or functionality defined in that function. This ensures that the core process runs immediately when the script is executed.
+
+Scheduler Job Addition:
+
+Add a job to the scheduler (sched) using the add_job() method.
+Set the id parameter as 'Monthly Smart PJP Scheduling' to uniquely identify the job.
+Set the func parameter to the run function, specifying what the scheduler should execute.
+Set the trigger parameter to "interval" to define the type of scheduling. Here, an interval trigger is used.
+Set the days parameter to 30 to specify that the run function should be executed every 30 days.
+
+Start Scheduler:
+Before calling the start, run the 'run' function once.
+Call the start() method on the sched object to start the scheduler. This ensures that the job added in the previous step will be executed according to the specified interval.
+
+8. Start Flask Application:
+
+Use the run() method of the app object to start the Flask web server.
+Set the host parameter to '0.0.0.0' to make the server accessible externally on the network.
+

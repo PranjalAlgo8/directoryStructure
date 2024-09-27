@@ -1,0 +1,6 @@
+The configurations submodule should have a config.ini file and a reader.py file.
+In the init file, we would import the configReader class and instantiate it so that it is available to this submodule
+
+eg:
+import ConfigReader from .reader
+ConfigReaderObj= ConfigReader()
